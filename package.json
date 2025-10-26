@@ -1,0 +1,26 @@
+{
+  "name": "pptx-to-pdf-service",
+  "version": "1.0.0",
+  "description": "Microservice to convert PPTX files to PDF using LibreOffice",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [
+    "pptx",
+    "pdf",
+    "conversion",
+    "libreoffice",
+    "microservice"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.500.0",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1"
+  }
+}
+
