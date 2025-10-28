@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: pptx-to-pdf-service
+    env: docker
+    plan: free # Change to 'starter' for better performance ($7/month)
+    region: singapore
+    healthCheckPath: /health
+    autoDeploy: true
+    buildCommand: npm ci
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TMP_DIR
+        value: /tmp
+      - key: PORT
+        value: 3000
+      # Add your AWS credentials as environment variables in Render dashboard
+      # - key: AWS_REGION
+      #   value: ap-south-1
+      # - key: AWS_ACCESS_KEY_ID
+      #   value: your-access-key
+      # - key: AWS_SECRET_ACCESS_KEY
+      #   sync: false # This marks it as a secret
+      # - key: S3_BUCKET
+      #   value: your-bucket-name
+
+
