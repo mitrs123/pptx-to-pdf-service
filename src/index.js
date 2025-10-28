@@ -130,7 +130,7 @@ app.post('/convert', async (req, res) => {
   const { s3Key, outputKey } = req.body;
   if (!s3Key) {
     clearTimeout(timeout);
-    return res.status(400).json({ error: 's3Key required' });
+    return res.status(400).json({ error: 's3Key required' }); 
   }
 
   const localPptx = tmpFileName('input', path.extname(s3Key) || '.pptx');
